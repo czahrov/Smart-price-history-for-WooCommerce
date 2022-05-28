@@ -1,0 +1,35 @@
+Cześć,
+po rozmowie z Marcinem. Proszę, w trybie mega pilnym ;) bo termin wejścia w życie ustawy nakazującej to w UE jest 28maja, zróbmy wtyczkę dla wyświetlania cen w sklepach woocommerce według nowej dyrektywy UE. Zastanó∑cie się czy jest poniższe wykonalne i w jakim terminie. 
+
+Wtyczka woocommerce - wyświetlanie cen do 30 dni wstecz
+język: wyłącznie angielski
+
+Wtyczka musi być kompatybilna z innymi rozwiązaniami ustalającymi ceny np. taka jak u mnie jest od wpdesku z którym mieliśmy problemy (nie dotyczy sklepów z  dynamiczne/indywidualnie ustalonymi cenami - to nas nie dotyczy)
+
+Zasady działania:
+
+1.Admin ustala ceny w swoim sklepie, czy to bezpośrednio w woocommerce czy innych wtyczkach od cen i promocji
+2. Klinet widzi cenę promocyjną ustaloną przez admina. Cenę przekreśloną z której robiona jest cena promocyjna (w zasadzie tego nie ruszamy to robi dotychczasowa wtyczka) + najniższą cenę danego produktu w ostatnich 30 dniach (to jest to rozwiazanie które musimy zrobić)
+
+Wtyczka ma:
+1. Zapisywać w bazie najniższą cenę z ostatnich 30 dni i ją wyświetlać
+2. Wyświetlać się pod boxem z ceną i przeceną na stronie produktu
+3. Tekst ma być definiowany przez admina np. na różne kraje, ale tez zawierać predefiniowany tekst (może w formie mini edytora tekstowego, gdzie będzie mógł określić wielkość, kolor, pogrubienia itp). Fajnie, jakby we wtyczce były np 3 z góry zdefiniowane teksty i za pomoca radioboxa admin wybiera jeden z nich lub wybiera czwarty radiobox i widzi mini edytor za pomocą kótrego wprowadza swój. teskst wyśwetla sie przed ceną
+4. Checkboxy odnoszące się do wyświetlania samej ceny
+- styl domyślmy (domyślnie zaznaczony)
+- cena pogrubiona
+- inny kolor ceny (tu wyświetlamy możliwość zmiany koloru)
+
+Pytanie co zrobić, gdy strona w sobie zawiera kilka języków?
+
+Dodatkowo będziemy musieli mieć w tej wtyczce pole teksotwe na górze opisujace działanie i zawierające wyłączenia.np.:
+ informacja o najniższej cenie ma być podawana tylko w przypadku promocji. Jeśli produkt nie jest na promocji/wyprzedaży, system nie wyświetla najniższej ceny z ostatnich 30 dni.
+
+
+
+Koniec. Gdyby pojawiły się niejasnosci piszcie / dzwoncie. Podajcie proszę termin.
+
+
+Pozdrawiam
+
+Karol Walaszczyk.

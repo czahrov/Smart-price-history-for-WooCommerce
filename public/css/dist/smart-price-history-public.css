@@ -1,0 +1,12 @@
+#smart-price-history-info {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  align-items: baseline;
+  padding: 0.5em 0.5em;
+  opacity: 1;
+  font-size: 0.8rem;
+}
+#smart-price-history-info .value.--bold {
+  font-weight: bold;
+}

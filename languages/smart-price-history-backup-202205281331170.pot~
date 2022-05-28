@@ -1,0 +1,133 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Price History\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-28 12:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-5.9.3\n"
+"X-Domain: smart-price-history"
+
+#: admin/template/config.php:30
+msgid "Current export status"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.smart-agency.pl"
+msgstr ""
+
+#: admin/template/config.php:18
+msgctxt "information"
+msgid "Information"
+msgstr ""
+
+#: admin/template/config.php:20
+msgctxt "information"
+msgid ""
+"The lowest price is displayed only when the product is on sale or promotion. "
+"Otherwise, the lowest price for the last month will not be displayed."
+msgstr ""
+
+#: libs/Plugin/SmartPlugin.php:132
+msgctxt "menu-name"
+msgid "Products price history"
+msgstr ""
+
+#: libs/Plugin/SmartPlugin.php:133
+msgctxt "menu-title"
+msgid "Price history"
+msgstr ""
+
+#: admin/template/config.php:149
+msgctxt "presentation"
+msgid "background color price"
+msgstr ""
+
+#: admin/template/config.php:122
+msgctxt "presentation"
+msgid "bold price"
+msgstr ""
+
+#: admin/template/config.php:133
+msgctxt "presentation"
+msgid "color price"
+msgstr ""
+
+#: admin/template/config.php:111
+msgctxt "presentation"
+msgid "enable price presentation"
+msgstr ""
+
+#: admin/template/config.php:161
+msgctxt "presentation"
+msgid "text displayed before price"
+msgstr ""
+
+#: admin/template/config.php:100
+msgctxt "presentation"
+msgid "The price presentation style"
+msgstr ""
+
+#. Description of the plugin
+msgid "Presentation of the lowest product price for last month."
+msgstr ""
+
+#: admin/template/config.php:166
+msgid "save changes"
+msgstr ""
+
+#: admin/template/config.php:78
+msgctxt "schedule"
+msgid "Last export time"
+msgstr ""
+
+#: admin/template/config.php:91
+msgctxt "schedule"
+msgid "Next scheduled export time"
+msgstr ""
+
+#: admin/template/config.php:86
+msgctxt "schedule"
+msgid "not launched yet"
+msgstr ""
+
+#. Author of the plugin
+msgid "Smart Agency <kontakt@smart-agency.pl>"
+msgstr ""
+
+#: admin/template/config.php:50
+msgctxt "status"
+msgid "completed"
+msgstr ""
+
+#: admin/template/config.php:53
+msgctxt "status"
+msgid "idle"
+msgstr ""
+
+#: admin/template/config.php:24
+msgctxt "status"
+msgid "Overwiev"
+msgstr ""
+
+#: admin/template/config.php:44
+msgctxt "status"
+msgid "processing"
+msgstr ""
+
+#: admin/template/config.php:41
+msgctxt "status"
+msgid "resuming"
+msgstr ""
+
+#. Name of the plugin
+msgid "Woocommerce Smart Price History"
+msgstr ""

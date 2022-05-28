@@ -1,0 +1,100 @@
+#smart-price-history {
+  margin: 0.5em 1em;
+  padding: 0.5em;
+}
+#smart-price-history .plugin-info {
+  padding: 1em 0.5em;
+  background-color: #e6e6e6;
+}
+#smart-price-history .plugin-info strong {
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+#smart-price-history section {
+  margin: 1em 0;
+  padding: 1em 0.5em;
+  font-size: 1rem;
+  background-color: #e6e6e6;
+}
+#smart-price-history section .header {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  padding-bottom: 0.5em;
+  padding-right: 2em;
+  border-bottom: solid 1px #000;
+  font-weight: 700;
+}
+#smart-price-history section .progressbar {
+  font-size: 0.7em;
+}
+#smart-price-history section .progressbar .bar {
+  width: 90%;
+  max-width: 500px;
+  height: 2em;
+  box-shadow: 0px 0px 1px 0px #000;
+}
+#smart-price-history section .progressbar .bar .progress {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+}
+#smart-price-history section .progressbar .bar .progress .label {
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  border: solid 1px #000;
+  border-width: 0 0 1px 1px;
+  line-height: 1em;
+}
+#smart-price-history section .run {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 10px;
+  margin-top: 3em;
+  font-size: 0.8em;
+}
+#smart-price-history section .run .--label {
+  font-weight: bold;
+}
+#smart-price-history section .status {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  font-size: 0.8em;
+}
+#smart-price-history section .status .field {
+  padding: 0.2em 0.4em 0.2em 0;
+}
+#smart-price-history section .status .field.--label {
+  font-weight: bold;
+}
+#smart-price-history section.presentation form {
+  font-size: 0.8rem;
+}
+#smart-price-history section.presentation form .input {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 6px;
+  margin-bottom: 0.5em;
+}
+#smart-price-history section.presentation form .input input {
+  margin: 0;
+}
+#smart-price-history section.presentation form .input input[type=text] {
+  width: 400px;
+  max-width: 100%;
+}
+#smart-price-history section.presentation form .example {
+  margin-top: 1em;
+  font-size: 0.96rem;
+}
+#smart-price-history section.presentation form .example.--bold {
+  font-weight: bold;
+}
+#smart-price-history section.presentation form input[type=submit] {
+  margin-top: 2em;
+}

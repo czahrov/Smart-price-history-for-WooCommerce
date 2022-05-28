@@ -1,0 +1,38 @@
+#smart-price-history section {
+  font-size: 1rem;
+}
+#smart-price-history section .header {
+  margin-bottom: 0.5em;
+}
+#smart-price-history section .progressbar {
+  font-size: 0.7em;
+}
+#smart-price-history section .progressbar .bar {
+  width: 90%;
+  max-width: 500px;
+  height: 2em;
+  border: solid 1px #000;
+}
+#smart-price-history section .progressbar .bar .progress {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+}
+#smart-price-history section .progressbar .bar .progress .label {
+  margin-left: -1px;
+  padding: 0.5em 0 0 0.5em;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  border: solid 1px #000;
+  border-width: 0 0 1px 1px;
+  line-height: 1em;
+}
+#smart-price-history section .next_run {
+  margin-top: 3em;
+  font-size: 0.8em;
+}
+#smart-price-history section .next_run strong {
+  font-size: 1.2em;
+}

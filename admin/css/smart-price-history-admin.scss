@@ -1,0 +1,126 @@
+$color-gray: hsl(0deg 0% 90%);
+
+#smart-price-history{
+    margin: 0.5em 1em;
+    padding: 0.5em;
+
+    .plugin-info{
+        padding: 1em 0.5em;
+        background-color: $color-gray;
+
+        strong{
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+    }
+
+    section{
+        margin: 1em 0;
+        padding: 1em 0.5em;
+        font-size: 1rem;
+        background-color: $color-gray;
+
+        .header{
+            display: inline-block;
+            margin-bottom: 0.5em;
+            margin-top: 0;
+            padding-bottom: 0.5em;
+            padding-right: 2em;
+            border-bottom: solid 1px #000;
+            font-weight: 700;
+        }
+
+        .progressbar{
+            font-size: 0.7em;
+            
+            .bar{
+                width: 90%;
+                max-width: 500px;
+                height: 2em;
+                box-shadow: 0px 0px 1px 0px #000;
+
+                .progress{
+                    position: relative;
+                    width: 50%;
+                    height: 100%;
+                    background-color: #000;
+
+                    .label{
+                        padding: 0.5em 0 0 0.5em;
+                        position: absolute;
+                        top: 100%;
+                        left: 100%;
+                        border: solid 1px #000;
+                        border-width: 0 0 1px 1px;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+
+        .run{
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            grid-gap: 10px;
+            margin-top: 3em;
+            font-size: 0.8em;
+
+            .--label{
+                font-weight: bold;
+            }
+
+        }
+
+        .status{
+            display: grid;
+            grid-template-columns: repeat(2, max-content);
+            font-size: 0.8em;
+            
+            .field{
+                padding: 0.2em 0.4em 0.2em 0;
+
+                &.--label{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &.presentation{
+
+            form{
+                font-size: 0.8rem;
+
+                .input{
+                    display: grid;
+                    grid-auto-columns: max-content;
+                    grid-auto-flow: column;
+                    align-items: center;
+                    grid-gap: 6px;
+                    margin-bottom: 0.5em;
+                    
+                    input{
+                        margin: 0;
+
+                        &[type=text]{
+                            width: 400px;
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                .example{
+                    margin-top: 1em;
+                    font-size: 0.96rem;
+
+                    &.--bold{
+                        font-weight: bold;
+                    }
+                }
+
+                input[type=submit]{
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+}

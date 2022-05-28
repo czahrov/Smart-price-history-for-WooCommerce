@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Price History\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-28 11:55+0000\n"
+"PO-Revision-Date: 2022-05-28 13:32+0000\n"
+"Last-Translator: Dawid Worhacz\n"
+"Language-Team: Polski\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-5.9.3\n"
+"X-Domain: smart-price-history"
+
+#: admin/template/config.php:30
+msgid "Current export status"
+msgstr "Aktualny stan eksportu"
+
+#. Author URI of the plugin
+msgid "https://www.smart-agency.pl"
+msgstr "https://www.smart-agency.pl"
+
+#: admin/template/config.php:18
+msgctxt "information"
+msgid "Information"
+msgstr "Informacja"
+
+#: admin/template/config.php:20
+msgctxt "information"
+msgid ""
+"The lowest price is displayed only when the product is on sale or promotion. "
+"Otherwise, the lowest price for the last month will not be displayed."
+msgstr ""
+"Najniższa cena wyświetlana jest jedynie gdy produkt znajduje się na promocji "
+"lub wyprzedaży. W innym przypadku najniższa cena nie będzie wyświetlana."
+
+#: libs/Plugin/SmartPlugin.php:132
+msgctxt "menu-name"
+msgid "Products price history"
+msgstr "Historia cen produktów"
+
+#: libs/Plugin/SmartPlugin.php:133
+msgctxt "menu-title"
+msgid "Price history"
+msgstr "Historia cen"
+
+#: admin/template/config.php:184
+msgctxt "presentation"
+msgid "background color price"
+msgstr "tło ceny"
+
+#: admin/template/config.php:157
+msgctxt "presentation"
+msgid "bold price"
+msgstr "pogrubienie ceny"
+
+#: admin/template/config.php:168
+msgctxt "presentation"
+msgid "color price"
+msgstr "kolor ceny"
+
+#: admin/template/config.php:122
+msgctxt "presentation"
+msgid "custom size price"
+msgstr "własny rozmiar ceny"
+
+#: admin/template/config.php:111
+msgctxt "presentation"
+msgid "enable price presentation"
+msgstr "włącz prezentację ceny"
+
+#: admin/template/config.php:196
+msgctxt "presentation"
+msgid "text displayed before price"
+msgstr "Tekst widoczny przed ceną"
+
+#: admin/template/config.php:100
+msgctxt "presentation"
+msgid "The price presentation style"
+msgstr "Styl prezentacji ceny"
+
+#. Description of the plugin
+msgid "Presentation of the lowest product price for last month."
+msgstr "Prezentacja najniższej ceny produktu z ostatniego miesiąca."
+
+#: admin/template/config.php:201
+msgid "save changes"
+msgstr "Zapisz"
+
+#: admin/template/config.php:78
+msgctxt "schedule"
+msgid "Last export time"
+msgstr "Ostatni eksport"
+
+#: admin/template/config.php:91
+msgctxt "schedule"
+msgid "Next scheduled export time"
+msgstr "Następny eksport"
+
+#: admin/template/config.php:86
+msgctxt "schedule"
+msgid "not launched yet"
+msgstr "jeszcze nie przeprowadzono"
+
+#. Author of the plugin
+msgid "Smart Agency <kontakt@smart-agency.pl>"
+msgstr "Smart Agency <kontakt@smart-agency.pl>"
+
+#: admin/template/config.php:50
+msgctxt "status"
+msgid "completed"
+msgstr "zakończony"
+
+#: admin/template/config.php:53
+msgctxt "status"
+msgid "idle"
+msgstr "bezczynny"
+
+#: admin/template/config.php:24
+msgctxt "status"
+msgid "Overwiev"
+msgstr "Przegląd"
+
+#: admin/template/config.php:44
+msgctxt "status"
+msgid "processing"
+msgstr "przetwarzanie"
+
+#: admin/template/config.php:41
+msgctxt "status"
+msgid "resuming"
+msgstr "wznawianie"
+
+#. Name of the plugin
+msgid "Woocommerce Smart Price History"
+msgstr "Woocommerce historia cen produktów"
