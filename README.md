@@ -1,0 +1,1 @@
+# Smart-price-history-for-WooCommerce
