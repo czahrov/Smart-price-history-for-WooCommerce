@@ -1,7 +1,7 @@
 <?php
 /*
     Plugin Name: Woocommerce Smart Price History
-    Description: Presentation of the lowest product price for last month.
+    Description: The plugin collects information about the lowest price of the product from the last month and presents it on the Woocommerce product page. The history of the lowest price for a product is recorded since the plug-in is enabled and is held daily at midnight.
     Version: 1.0.0
     Author: Smart Agency <kontakt@smart-agency.pl>
     Author URI: https://www.smart-agency.pl

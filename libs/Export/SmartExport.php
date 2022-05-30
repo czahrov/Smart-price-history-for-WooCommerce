@@ -44,6 +44,8 @@ class SmartExport
 
             self::setProgress($progress + (100 - $progress) * ($product_num + 1) / count($products));
         }
+
+        self::setProgress(0);
     }
 
     /**

@@ -10,7 +10,9 @@
         <strong>
             <?php _ex('Information', 'information', 'smart-price-history'); ?>:
         </strong>
-        <?php _ex('The lowest price is displayed only when the product is on sale or promotion. Otherwise, the lowest price for the last month will not be displayed.', 'information', 'smart-price-history'); ?>
+        <?php 
+            echo _x('The lowest price is displayed only when the product is on sale or promotion. Otherwise, the lowest price for the last month will not be displayed.', 'information', 'smart-price-history'). ' ' .__('The plugin collects information about the lowest price of the product from the last month and presents it on the Woocommerce product page. The history of the lowest price for a product is recorded since the plug-in is enabled and is held daily at midnight.', 'smart-price-history');
+        ?>
     </div>
     <section class='overview'>
         <div class='header'>
@@ -73,7 +75,7 @@
             <div class='field --value'>
                 <?php 
                     if($last_export instanceof \DateTime){
-                        echo wp_date('m F, H:i:s (e)', $last_export->getTimestamp());
+                        echo wp_date('d F, H:i:s (e)', $last_export->getTimestamp());
                     }
                     else{
                         _ex('not launched yet', 'schedule', 'smart-price-history');
@@ -84,7 +86,7 @@
                 <?php _ex('Next scheduled export time', 'schedule', 'smart-price-history'); ?>:
             </div>
             <div class='field --value'>
-                <?php echo wp_date('m F, H:i:s (e)', wp_next_scheduled( 'smart_price_history_export' )); ?>
+                <?php echo wp_date('d F, H:i:s (e)', wp_next_scheduled( 'smart_price_history_export' )); ?>
             </div>
         </div>
     </section>

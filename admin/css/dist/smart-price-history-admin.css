@@ -98,3 +98,7 @@
 #smart-price-history section.presentation form input[type=submit] {
   margin-top: 2em;
 }
+
+#toplevel_page_smart-price-history .wp-menu-image img {
+  width: 20px;
+}

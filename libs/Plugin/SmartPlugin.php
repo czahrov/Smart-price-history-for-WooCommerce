@@ -82,7 +82,7 @@ class SmartPlugin
      *
      * @return void
      */
-    public static function checkExport()
+    public static function checkExport():void
     {
         Export::check();
     }
@@ -92,7 +92,7 @@ class SmartPlugin
      *
      * @return void
      */
-    public static function renderLowestPrice()
+    public static function renderLowestPrice():void
     {
         global $product;
 
@@ -111,7 +111,7 @@ class SmartPlugin
      *
      * @return void
      */
-    public static function savePostData()
+    public static function savePostData():void
     {
         if(
             !empty($_POST['sph_config'])
@@ -126,7 +126,7 @@ class SmartPlugin
      *
      * @return void
      */
-    public static function addMenu()
+    public static function addMenu():void
     {
         $hookname = add_menu_page(
             _x('Products price history', 'menu-name', 'smart-price-history'),
@@ -137,7 +137,7 @@ class SmartPlugin
 
                 include PLUGIN_DIR . '/admin/template/config.php';
             },
-            '',
+            PLUGIN_URL . '/admin/media/menu-icon.png',
             27
         );
 
