@@ -82,10 +82,12 @@ class SmartExport
             $product = wc_get_product( (int) $product );
         }
         elseif( !$product instanceof \WC_Product ){
-            return false;
+            return 0;
         }
 
-        $product_price = (float) $product->get_price();
+        $product_regular_price  = (float) $product->get_regular_price();
+        $product_sale_price     = (float) $product->get_sale_price();
+        $product_price          = (float) $product->get_price();
 
         foreach($product->get_category_ids() as $cat_id){
 
@@ -121,7 +123,7 @@ class SmartExport
             }
         }
 
-        return $product_price;
+        return min($product_price, $product_sale_price, $product_regular_price);
     }
 
     /**
