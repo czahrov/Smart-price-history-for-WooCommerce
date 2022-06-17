@@ -29,7 +29,7 @@ class SmartPlugin {
 			$wpdb->prepare(
 				"DELETE FROM %s WHERE option_name LIKE '%s%%'"
 				, $wpdb->options
-				, self::$option_prefix
+				, esc_like( self::$option_prefix )
 			)
 		);
 	}
@@ -107,12 +107,13 @@ class SmartPlugin {
 	 * @return void
 	 */
 	public static function savePostData() {
-		if(
+		if (
 			isset($_POST['sph_config'])
 			&& !empty($_POST['sph_config'])
 			&& wp_verify_nonce($_POST['sph_config_nonce'], 'sph-config-form')
 		){
-			update_option( self::$option_prefix . 'config', json_encode($_POST['sph_config']) );
+			$sph_config = $_POST['sph_config'];
+			update_option( self::$option_prefix . 'config', json_encode( $sph_config ) );
 		}
 	}
 

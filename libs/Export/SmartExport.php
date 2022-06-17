@@ -13,10 +13,10 @@ class SmartExport
 	 *
 	 * @return void
 	 */
-	public static function start(){
+	public static function start() {
 		$status = self::getStatus();
 
-		if ( $status->is_active ) return;   // abort when already running
+		if ( $status->is_active ){ return; }  // abort when already running
 
 		global $wpdb;
 
@@ -24,11 +24,11 @@ class SmartExport
 		$products   = self::getProducts();
 		$products   = array_slice($products, floor($progress/100 * count($products ) ));
 
-		foreach ($products as $product_num => $product_id){
+		foreach ($products as $product_num => $product_id) {
 			$wc_product     = wc_get_product( $product_id );
 			$product_price  = self::calcPrice($wc_product);
 			
-			if ($product_price > 0){
+			if ($product_price > 0) {
 
 				$wpdb->insert(
 					'smart_price_history'
@@ -56,10 +56,10 @@ class SmartExport
 	 *
 	 * @return int[]
 	 */
-	public static function getProducts(){
+	public static function getProducts() {
 		$products = null;
 
-		if (is_null($products ) ){
+		if (is_null($products ) ) {
 			$products = wc_get_products(array(
 				'status' => ['publish', 'draft'],
 				'limit' => -1,
@@ -78,11 +78,11 @@ class SmartExport
 	 * @param \WC_Product $product
 	 * @return float
 	 */
-	public static function calcPrice($product){
-		if ( is_numeric($product) ){
+	public static function calcPrice($product) {
+		if ( is_numeric($product) ) {
 			$product = wc_get_product( (int) $product );
 		}
-		elseif ( !$product instanceof \WC_Product ){
+		elseif ( !$product instanceof \WC_Product ) {
 			return 0;
 		}
 
@@ -90,13 +90,15 @@ class SmartExport
 		$product_sale_price     = (float) $product->get_sale_price();
 		$product_price          = (float) $product->get_price();
 
-		foreach ($product->get_category_ids() as $cat_id){
+		foreach ($product->get_category_ids() as $cat_id) {
+
+			$set = self::getCategoryRules()["set_{$cat_id}"];
 
 			if (
 				isset(self::getCategoryRules()["set_{$cat_id}"])
-				&& is_array( ( $set = self::getCategoryRules()["set_{$cat_id}"] ) )
+				&& is_array( $set )
 				&& !empty($rules = $set['rules'])
-			){
+			) {
 				$rule = $rules[0];
 				$amount = $rule['amount'];
 
@@ -104,7 +106,7 @@ class SmartExport
 					!empty( ( $type = $rule['type'] ) )
 					&& isset($set['collector']['args']['cats'])
 					&& in_array($cat_id, $set['collector']['args']['cats'])
-				){
+				) {
 
 					switch ($type) {
 						case 'percent_product':
@@ -116,7 +118,7 @@ class SmartExport
 							break;
 
 						default:
-						break;
+							break;
 					}
 
 					break;
@@ -167,10 +169,10 @@ class SmartExport
 			)
 		)
 	 */
-	public static function getCategoryRules(){
+	public static function getCategoryRules() {
 		$rules = null;
 
-		if (is_null($rules ) ){
+		if (is_null($rules ) ) {
 			$rules = get_option('_s_category_pricing_rules', array( ) );
 		}
 
@@ -183,7 +185,7 @@ class SmartExport
 	 * @param float $progress
 	 * @return void
 	 */
-	public static function setProgress(float $progress){
+	public static function setProgress($progress) {
 		update_option( 'sph_last_activity', time() );
 		update_option( 'sph_export_progress', $progress );
 	}
@@ -193,7 +195,7 @@ class SmartExport
 	 *
 	 * @return float
 	 */
-	public static function getProgress(){
+	public static function getProgress() {
 		return get_option( 'sph_export_progress', 0 );
 	}
 
@@ -202,7 +204,7 @@ class SmartExport
 	 *
 	 * @return integer
 	 */
-	public static function getLastActivity():int
+	public static function getLastActivity()
 	{
 		return (int) get_option('sph_last_activity', 0);
 	}
@@ -218,7 +220,7 @@ class SmartExport
 	 *  is_dead:bool
 	 * }
 	 */
-	public static function getStatus():object
+	public static function getStatus()
 	{
 		$last_activity  = self::getLastActivity();
 		$progress       = self::getProgress();
@@ -240,9 +242,9 @@ class SmartExport
 	 *
 	 * @return void
 	 */
-	public static function check(){
+	public static function check() {
 
-		if (self::getStatus()->is_dead){
+		if (self::getStatus()->is_dead) {
 			self::start();
 		}
 	}
@@ -252,13 +254,12 @@ class SmartExport
 	 *
 	 * @return void
 	 */
-	public static function cleaner(){
+	public static function cleaner() {
 		global $wpdb;
 
-		$sql = <<<QQQ
-		DELETE FROM `smart_price_history`
-		WHERE date < ADDDATE(now(), INTERVAL -1 MONTH)
-		QQQ;
+		$sql = "DELETE FROM `smart_price_history`
+			WHERE date < ADDDATE(now(), INTERVAL -1 MONTH)
+		";
 
 		$wpdb->query($sql);
 	}
